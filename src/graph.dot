@@ -1,0 +1,9 @@
+digraph G {
+"5d0_push" -> "5d2_add"
+"5d2_add" -> "5d4_b"
+"5d4+2_b" -> "5d6_adr"
+"5d4_b" -> "5d4_mov"
+"5d4_mov" -> "5d4+2_b"
+"5d6_adr" -> "5d8_adr"
+"5d8_adr" -> "5da_blx"
+}

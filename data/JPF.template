@@ -1,0 +1,44 @@
+@using=jpf-symbc
+@using=jpf-nhandler
+
+target={{package_name}}.{{class_name}}Wrapper
+classpath=${config_path}/src,{{base_android}}
+native_classpath =${config_path}/src
+
+sourcepath=${config_path}/src
+librarypath=${config_path}/{{native_lib}}
+output=${config_path}
+
+nhandler.delegateUnhandledNative = false
+nhandler.spec.skip = android.os.SystemProperties.*,android.os.Handler.*,\
+	 android.content.pm.PackageManager.*,android.app.Activity.<init>,\
+	 java.io.File.getAbsolutePath, libcore.io.OsConstants.*,libcore.io.Posix.*,\
+	 android.os.SystemProperties.*,android.os.Bundle.*,\
+	 android.os.Build.*,org.apache.http.message.BasicNameValuePair.*,org.apache.http.client.*,\
+	 org.apache.http.client.utils.URLEncodedUtils.*,org.apache.commons.logging.LogFactory.*,\
+	 org.apache.http.client.entity.UrlEncodedFormEntity.*, java.nio.charset.Charset.*,\
+	 org.apache.http.impl.client.DefaultHttpClient.*,org.apache.http.impl.client.AbstractHttpClient.*,\
+	 org.apache.http.impl.client.BasicResponseHandler.*, android.util.Log.*, android.view.View.*, android.app.Activity.findViewById,\
+	 org.apache.http.client.methods.HttpRequestBase.*, org.apache.http.client.methods.HttpPost.*,\
+	 org.apache.http.client.methods.HttpPost.setEntity, org.apache.http.impl.client.BasicResponseHandler.handleResponse,\
+	 android.widget.TextView.setText, android.app.Activity.*,java.io.RandomAccessFile.*,dalvik.system.*	,\
+	 android.app.Service.*,android.os.Environment.*,java.lang.System.*,java.util.Date.*,android.text.format.DateFormat.*,\
+	 java.lang.Thread.*,java.lang.Class.getDeclaredMethod.*,android.location.LocationManager.*,\
+	 android.app.ActivityManager.*,java.util.List.*,javax.crypto.SecretKeyFactory.*,java.lang.String.*,javax.crypto.spec.*,javax.crypto.Cipher.*,\
+	 java.net.URL.*,java.io.FilterOutputStream.*,java.lang.StringBuilder.*,java.util.regex.Pattern.*
+
+nhandler.clean = false
+{% if entry_point == 'onRequestPermissionsResult' %}
+symbolic.method = {{package_name}}.{{class_name}}Wrapper.runRequest()
+{% else %}
+symbolic.method = {{package_name}}.{{class_name}}Wrapper.run()
+{% endif %}
+symbolic.dp=choco
+symbolic.debug=true
+#symbolic.min_int=-100
+#symbolic.max_int=100
+#vm.storage.class=nil
+
+############################### 4. Listener part #############################
+#listener+=,.symbc.NativeListener
+listener=.symbc.TaintListener

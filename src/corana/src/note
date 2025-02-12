@@ -1,0 +1,222 @@
+[Console output redirected to file:/home/va/output]
+[WARNING] unknown classpath element: /home/va/git/jpf-nhandler/build/jpf-nhandler-classes.jar
+Running Symbolic PathFinder ...
+symbolic.dp=choco
+symbolic.string_dp_timeout_ms=0
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=32
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+ooo.defcon2019.quals.veryandroidoso.SolverWrapper.main()
+
+====================================================== search started: 8/26/22 11:06 AM
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getCharVolatile(Ljava/lang/Object;J)C
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putChar(Ljava/lang/Object;JC)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putCharVolatile(Ljava/lang/Object;JC)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getShort(Ljava/lang/Object;J)S
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getShortVolatile(Ljava/lang/Object;J)S
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putShort(Ljava/lang/Object;JS)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putShortVolatile(Ljava/lang/Object;JS)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getFloat(Ljava/lang/Object;J)F
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getFloatVolatile(Ljava/lang/Object;J)F
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putFloat(Ljava/lang/Object;JF)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putFloatVolatile(Ljava/lang/Object;JF)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getDouble(Ljava/lang/Object;J)D
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getDoubleVolatile(Ljava/lang/Object;J)D
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putDouble(Ljava/lang/Object;JD)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putDoubleVolatile(Ljava/lang/Object;JD)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.allocateMemory(J)J
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.freeMemory(J)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getByte(J)B
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putByte(JB)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getChar(J)C
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putChar(JC)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getInt(J)I
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putInt(JI)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getLong(J)J
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putLong(JJ)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getChar(Ljava/lang/Object;J)C
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getByte(Ljava/lang/Object;J)B
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.ensureClassInitialized(Ljava/lang/Class;)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getBoolean(Ljava/lang/Object;J)Z
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getBooleanVolatile(Ljava/lang/Object;J)Z
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putBoolean(Ljava/lang/Object;JZ)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putBooleanVolatile(Ljava/lang/Object;JZ)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.getByteVolatile(Ljava/lang/Object;J)B
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putByte(Ljava/lang/Object;JB)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.putByteVolatile(Ljava/lang/Object;JB)V
+[WARNING] orphan NativePeer method: sun.misc.Unsafe.fieldOffset(Ljava/lang/reflect/Field;)I
+* SKIPPING -> ooo.defcon2019.quals.veryandroidoso.Solver.getSecretNumber
++ Flags:
+	- N:0	n_SYM
+	- Z:0	z_SYM
+	- C:0	c_SYM
+	- V:0	v_SYM
+	- Q:0	q_SYM
+	- GE:0	ge_SYM+ Register (32-bit):
+	- R0	: 01101000101111100010101111000010 0x68BE2BC2 (1757293506) | #x68be2bc2
+	- R1	: 00000000000000000000001001110001 0x00000271 (625) | #x00000271
+	- R2	: 00000000000000000000000011110000 0x000000F0 (240) | #x000000f0
+	- R3	: 00000000000000000000000000000000 0x00000000 (0) | #x00000000
+	- R4	: 00000000000000000000000000000000 0x00000000 (0) | r4_SYM
+	- R5	: 00000000000000000000000000000000 0x00000000 (0) | r5_SYM
+	- R6	: 00000000000000000000000000000000 0x00000000 (0) | r6_SYM
+	- R7	: 00000000000000000000000000000000 0x00000000 (0) | r7_SYM
+	- R8	: 00000000000000000000000000000000 0x00000000 (0) | r8_SYM
+	- R9	: 00000000000000000000000000000000 0x00000000 (0) | r9_SYM
+	- R11	: 00000000000000000000000000000000 0x00000000 (0) | r11_SYM
+	- LR	: 00000000000000000000000000000000 0x00000000 (0) | lr_SYM
+	- PC	: 00000000000000000000000000000000 0x00000000 (0) | pc
+	- SP	: 00000000000000000000000000000000 0x00000000 (0) | #xbefffc08
+	- R12	: 00000000000000000000000000000000 0x00000000 (0) | r12_SYM
+	- R10	: 00000000000000000000000000000000 0x00000000 (0) | r10_SYM
++ Stack:
++ Memory:
+libnative-lib.so
+Exploring m0
+ + Analyzing /home/va/eclipse-workspace/JNIDefcon/ooo.defcon2019.quals.veryandroidoso/lib/armeabi-v7a/libnative-lib.so ...
+-> Capstone disassembler elapsed: 188ms
+-> Exporting to .capstone-asm file ...
+Aug 26, 2022 11:07:04 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Aug 26, 2022 11:07:05 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Aug 26, 2022 11:07:05 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:29}] to localhost:27017
+Aug 26, 2022 11:07:05 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 4]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, roundTripTimeNanos=198765}
+Aug 26, 2022 11:07:05 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:30}] to localhost:27017
+ + Parsing /home/va/eclipse-workspace/JNIDefcon/ooo.defcon2019.quals.veryandroidoso/lib/armeabi-v7a/libnative-lib.so ...
+
+-> Executing ace : b 2766-2
+	-> Direct Jump to 2766-2 if EQ
+	-> Checking path constrains by Z3 ...  z_SYM  SAT
+	-> Checking path constrains by Z3 ...  (not z_SYM)  SAT
+	-> Start Jumping from ace --> ace
+-> Executing ace : rsb pc,fp,r3,lsr #3
+-> Executing ace+2 : b 0xad0
+	-> Direct Jump to 2768
+	-> Non-existing label, break.
+-> Executing ad2 : asr r1,r0,#0x1f
+-> Executing ad4 : add.w r1,r0,r1,lsr #24
+-> Executing ad8 : bic r1,r1,#0xff
+-> Executing adc : sub r0,r0,r1
+-> Executing ade : add.w r0,r0,#0x100
+-> Executing ae2 : asr r1,r0,#0x1f
+-> Executing ae4 : add.w r1,r0,r1,lsr #24
+-> Executing ae8 : bic r1,r1,#0xff
+-> Executing aec : sub r0,r0,r1
+-> Executing aee : add.w r1,r2,#0x25
+-> Executing af2 : asr r2,r1,#0x1f
+-> Executing af4 : add.w r2,r1,r2,lsr #24
+-> Executing af8 : bic r2,r2,#0xff
+-> Executing afc : sub r1,r1,r2
+-> Executing afe : eor r0,r1
+-> Process ended. Time elapsed: 939ms
+-> Time elapsed: 939ms
++ Flags:
+	- N:0	(bvslt #x00000200 #x00000000)
+	- Z:0	(= #x00000200 #x00000000)
+	- C:0	(bvugt #x00000200 #xffffffff)
+	- V:0	(or (bvsgt #x00000200 #x7fffffff) (bvslt #x00000200 #x80000001))
+	- Q:0	q_SYM
+	- GE:0	ge_SYM+ Register (32-bit):
+	- R0	: 01101000101111100010011111000010 0x68BE27C2 (1757292482) | #x68be27c2
+	- R1	: 00000000000000000000001000000000 0x00000200 (512) | #x00000200
+	- R2	: 00000000000000000000000000000000 0x00000000 (0) | #x00000000
+	- R3	: 00000000000000000000000000000000 0x00000000 (0) | #x00000000
+	- R4	: 00000000000000000000000000000000 0x00000000 (0) | r4_SYM
+	- R5	: 00000000000000000000000000000000 0x00000000 (0) | r5_SYM
+	- R6	: 00000000000000000000000000000000 0x00000000 (0) | r6_SYM
+	- R7	: 00000000000000000000000000000000 0x00000000 (0) | r7_SYM
+	- R8	: 00000000000000000000000000000000 0x00000000 (0) | r8_SYM
+	- R9	: 00000000000000000000000000000000 0x00000000 (0) | r9_SYM
+	- R11	: 00000000000000000000000000000000 0x00000000 (0) | r11_SYM
+	- LR	: 00000000000000000000000000000000 0x00000000 (0) | lr_SYM
+	- PC	: 00000000000000000000101100000010 0x00000B02 (2818) | #x00000b02
+	- SP	: 00000000000000000000000000000000 0x00000000 (0) | #xbefffc08
+	- R12	: 00000000000000000000000000000000 0x00000000 (0) | r12_SYM
+	- R10	: 00000000000000000000000000000000 0x00000000 (0) | r10_SYM
++ Stack:
++ Memory:
+
+Return value:1757292482
+numeric PC: constraint # = 1
+CONST_1 == CONST_172 -> false
+
+### PCs: total:1 sat:0 unsat:1
+
+numeric PC: constraint # = 1
+CONST_1 != CONST_172 -> true
+
+### PCs: total:2 sat:1 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+CONST_1 != CONST_172
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:08
+states:             new=1,visited=0,backtracked=1,end=1
+search:             maxDepth=1,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
+heap:               new=633,released=16,maxLive=0,gcCycles=1
+instructions:       13518
+max memory:         1130MB
+loaded code:        classes=77,methods=1353
+
+====================================================== search finished: 8/26/22 11:07 AM
+
+ + Parsing /home/va/Projects/java_androidnative1/androidnative1/lib/armeabi-v7a/libnative-lib.so ...
+
+-> Executing 7efc : push {r4,r5,r7,lr}
+-> Executing 7efe : add r7,sp,#8
+-> Executing 7f00 : sub sp,#0x20
+-> Executing 7f02 : mov ip,r3
+-> Executing 7f04 : mov lr,r2
+-> Executing 7f06 : mov r4,r1
+-> Executing 7f08 : mov r5,r0
+-> Executing 7f0a : str r0,[sp,#0x1c]
+-> Executing 7f0c : str r1,[sp,#0x18]
+-> Executing 7f0e : str r2,[sp,#0x14]
+-> Executing 7f10 : str r3,[sp,#0x10]
+-> Executing 7f12 : ldr r0,[sp,#0x14]
+-> Executing 7f14 : ldr r1,[sp,#0x10]
+-> Executing 7f16 : b 32534-2
+	-> Direct Jump to 32534-2 if LS
+	-> Checking path constrains by Z3 ...  (or z_SYM(not c_SYM))  SAT
+	-> Checking path constrains by Z3 ...  (not (or z_SYM(not c_SYM)))  SAT
+	-> Start Jumping from 7f16 --> 7f16
+-> Executing 7f16 : mu r0,r1,r0
+-> Executing 7f16+2 : b 0x7f18
+	-> Direct Jump to 32536
+	-> Start Jumping from 7f16+2 --> 7f18
+-> Executing 7f18 : str.w ip,[sp,#0xc]
+-> Executing 7f1c : str.w lr,[sp,#8]
+-> Executing 7f20 : str r4,[sp,#4]
+-> Executing 7f22 : str r5,[sp]
+-> Executing 7f24 : add sp,#0x20
+-> Executing 7f26 : pop {r4,r5,r7,pc}
+-> Process ended. Time elapsed: 2866ms
+-> Time elapsed: 2866ms

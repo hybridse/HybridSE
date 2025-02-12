@@ -1,0 +1,19 @@
+package {{package_name}};
+
+import android.os.Bundle;
+import android.content.Context;
+import android.view.View; 
+
+public class {{class_name}}Wrapper {
+	public static void main(String[] args) {
+			{{class_name}}Wrapper.run();
+		}
+
+	public static void run() {
+		{% if entry_point == 'onCreate' %}
+		{{class_name}} app = new {{class_name}}();
+		app.attachBaseContext(app.getApplicationContext());
+		app.onCreate();
+		{% endif %}
+	}	
+}

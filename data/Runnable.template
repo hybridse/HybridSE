@@ -1,0 +1,14 @@
+package {{package_name}};
+
+import android.os.Bundle;
+
+public class {{class_name}}Wrapper {
+
+	public static void main(String[] args) {
+		{{class_name}}Wrapper.run();
+	}
+	public static void run() {
+		{{class_name}} asyncT = new {{class_name}}(null, 1, 1, 1);
+        asyncT.doInBackground();
+	}
+}

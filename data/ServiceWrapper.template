@@ -1,0 +1,22 @@
+package {{package_name}};
+
+import android.os.Bundle;
+import android.content.Context;
+import android.view.View; 
+import android.content.Intent;
+import java.io.FileDescriptor;
+
+public class {{class_name}}Wrapper {
+
+	public static void main(String[] args) {
+		int[] intArray = {10,20,30,40,50,60,70,80};
+		{% if entry_point == 'onCreate' %}
+		(new {{class_name}}()).onCreate();
+		
+		{% else %}
+		Intent intent = new Intent();
+		(new {{class_name}}()).{{entry_point}}(intent, 0);
+		{% endif %}
+
+	}
+}

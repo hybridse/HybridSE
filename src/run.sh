@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export PROJ_DIR=$1
+echo "$2"
+echo "RUN SE TOOLS"
+cd ${PROJ_DIR}
+
+#echo "BUILDING JPF-SYMBC"
+#cd ${PROJ_DIR}/jpf-core/ && ant clean build && cd ..
+#cd ${PROJ_DIR}/jpf-symbc/ && ant clean build && cd ..
+#cd ${PROJ_DIR}/jpf-nhandler/ && ant clean build && cd ..
+#sudo mongod -dbpath /var/lib/mongo -logpath /var/log/mongodb/mongod.log --fork
+
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -Xmx2024m -Dfile.encoding=UTF-8 -classpath ${PROJ_DIR}/jpf-symbc/build/main:${PROJ_DIR}/jpf-symbc/build/annotations:${PROJ_DIR}/jpf-symbc/build/examples:${PROJ_DIR}/jpf-symbc/build/peers:${PROJ_DIR}/jpf-symbc/build/tests:${PROJ_DIR}/jpf-symbc/build/classes:${PROJ_DIR}/jpf-symbc/build:${PROJ_DIR}/jpf-core/build/main:${PROJ_DIR}/jpf-core/build/peers:${PROJ_DIR}/jpf-core/build/classes:${PROJ_DIR}/jpf-core/build/annotations:${PROJ_DIR}/jpf-core/build/examples:${PROJ_DIR}/jpf-core/build/tests:${PROJ_DIR}/jpf-core/build:${PROJ_DIR}/jpf-symbc/lib/grappa.jar:${PROJ_DIR}/jpf-symbc/lib/aima-core.jar:${PROJ_DIR}/jpf-symbc/lib/automaton.jar:${PROJ_DIR}/jpf-symbc/lib/bcel.jar:${PROJ_DIR}/jpf-symbc/lib/choco-1_2_04.jar:${PROJ_DIR}/jpf-symbc/lib/choco-solver-2.1.1-20100709.142532-2.jar:${PROJ_DIR}/jpf-symbc/lib/com.microsoft.z3.jar:${PROJ_DIR}/jpf-symbc/lib/commons-lang-2.4.jar:${PROJ_DIR}/jpf-symbc/lib/commons-math-1.2.jar:${PROJ_DIR}/jpf-symbc/lib/coral.jar:${PROJ_DIR}/jpf-symbc/lib/green.jar:${PROJ_DIR}/jpf-symbc/lib/hampi.jar:${PROJ_DIR}/jpf-symbc/lib/iasolver.jar:${PROJ_DIR}/jpf-symbc/lib/jaxen.jar:${PROJ_DIR}/jpf-symbc/lib/jedis-2.0.0.jar:${PROJ_DIR}/jpf-symbc/lib/JSAP-2.1.jar:${PROJ_DIR}/jpf-symbc/lib/libcvc3.jar:${PROJ_DIR}/jpf-symbc/lib/opt4j-2.4.jar:${PROJ_DIR}/jpf-symbc/lib/org.sat4j.core.jar:${PROJ_DIR}/jpf-symbc/lib/org.sat4j.pb.jar:${PROJ_DIR}/jpf-symbc/lib/scale.jar:${PROJ_DIR}/jpf-symbc/lib/solver.jar:${PROJ_DIR}/jpf-symbc/lib/Statemachines.jar:${PROJ_DIR}/jpf-symbc/lib/STPJNI.jar:${PROJ_DIR}/jpf-symbc/lib/string.jar:${PROJ_DIR}/jpf-symbc/lib/yicesapijava.jar:/home/va/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar:/home/va/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar:${PROJ_DIR}/jpf-symbc/lib/proteus.jar:${PROJ_DIR}/jpf-symbc/lib/antlr4-4.9.2-complete.jar:${PROJ_DIR}/jpf-nhandler/build/main:${PROJ_DIR}/jpf-nhandler/build/peers:${PROJ_DIR}/jpf-nhandler/build/classes:${PROJ_DIR}/jpf-nhandler/build/examples:${PROJ_DIR}/jpf-nhandler/build/tests:${PROJ_DIR}/jpf-nhandler/build:${PROJ_DIR}/jpf-nhandler/lib/bcel-5.2.jar:${PROJ_DIR}/jpf-nhandler/lib/examples-lib/json-20090211.jar:${PROJ_DIR}/jpf-nhandler/lib/examples-lib/google-api-translate-java-0.97.jar:${PROJ_DIR}/jpf-nhandler/lib/examples-lib/commons-math3-3.1.jar:${PROJ_DIR}/jpf-nhandler/lib/examples-lib/jgroups-3.2.5.jar:${PROJ_DIR}/jpf-nhandler/lib/examples-lib/db-derby-10.9.1.0/lib/derby.jar:${PROJ_DIR}/jpf-symbc/lib/corana.jar gov.nasa.jpf.tool.RunJPF -out $2

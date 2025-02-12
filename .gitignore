@@ -1,0 +1,8 @@
+/target/
+/.git/
+/.settings/
+.project
+.gitmodules
+/.idea/*
+corana.iml
+/.vscode

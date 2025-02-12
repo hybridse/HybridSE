@@ -1,0 +1,409 @@
+2024-04-07 01:53:26 INFO  (LoggingInitialization) Using log config file: jar:file:/home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2024-04-07 01:53:26 INFO  (LoggingInitialization) Using log file: /home/va/git/HybridSE/src/lib/GhidraScripts/ghidra.log  
+2024-04-07 01:53:26 INFO  (Preferences) Loading user preferences: /home/va/.ghidra/.ghidra_10.1.4_PUBLIC/preferences  
+2024-04-07 01:53:26 INFO  (Preferences) Loading previous preferences: /home/va/.ghidra/.ghidra_10.3.1_PUBLIC/preferences  
+2024-04-07 01:53:27 INFO  (ClassSearcher) Class search complete (1151 ms)  
+2024-04-07 01:53:27 INFO  (SSLContextInitializer) Initializing SSL Context  
+2024-04-07 01:53:27 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2024-04-07 01:53:27 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2024-04-07 01:53:27 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/va/git/HybridSE/src/lib/GhidraScripts/src
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts  
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer) Creating temporary project: /home/va/git/HybridSE/src/lib/GhidraScripts/f8e01dd0-6b45-4a4b-8155-00a1c81f18e4  
+2024-04-07 01:53:27 INFO  (DefaultProject) Creating project: /home/va/git/HybridSE/src/lib/GhidraScripts/f8e01dd0-6b45-4a4b-8155-00a1c81f18e4  
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer)      project: /home/va/git/HybridSE/src/lib/GhidraScripts/f8e01dd0-6b45-4a4b-8155-00a1c81f18e4  
+2024-04-07 01:53:27 INFO  (HeadlessAnalyzer) IMPORTING: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:29 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2024-04-07 01:53:29 DEBUG (ElfHeader) Elf relocation table section .rel.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2024-04-07 01:53:29 DEBUG (ElfHeader) Elf relocation table section .rel.plt linked to symbol table section .dynsym affecting .plt  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .data at 00016000 from file offset 20480  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .got at 00015f24 from file offset 20260  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .dynamic at 00015e0c from file offset 19980  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .init_array at 00015e08 from file offset 19976  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .data.rel.ro at 00015d70 from file offset 19824  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .fini_array at 00015d68 from file offset 19816  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .rodata at 00013f34 from file offset 16180  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .ARM.exidx at 00013ca4 from file offset 15524  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .ARM.extab at 00013bb4 from file offset 15284  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .text at 00011cb0 from file offset 7344  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .plt at 00011ac8 from file offset 6856  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .rel.plt at 00011990 from file offset 6544  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .rel.dyn at 00011840 from file offset 6208  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .hash at 00011524 from file offset 5412  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00010788 from file offset 1928  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .dynsym at 00010148 from file offset 328  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .interp at 00010134 from file offset 308  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00010000 from file offset 0  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Discarding 1-byte alignment/filler segment_2.3 at 00010147  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Discarding 2-byte alignment/filler segment_2.6 at 00011522  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 20613  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .ARM.attributes at OTHER:00000000 from file offset 20568  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .note.gnu.gold-version at OTHER:00000000 from file offset 20540  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 20484  
+2024-04-07 01:53:29 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 20816  
+2024-04-07 01:53:29 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "ARM:LE:32:v8" and cspec "default" for file: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:31 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/PreScript.java  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c08, pcode error at 0001706c: Unable to disassemble EXTERNAL block location: 0001706c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c50, pcode error at 00017084: Unable to disassemble EXTERNAL block location: 00017084  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c14, pcode error at 00017070: Unable to disassemble EXTERNAL block location: 00017070  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b54, pcode error at 00017030: Unable to disassemble EXTERNAL block location: 00017030  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011bd8, pcode error at 0001705c: Unable to disassemble EXTERNAL block location: 0001705c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c5c, pcode error at 00017094: Unable to disassemble EXTERNAL block location: 00017094  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b9c, pcode error at 00017048: Unable to disassemble EXTERNAL block location: 00017048  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011bfc, pcode error at 00017068: Unable to disassemble EXTERNAL block location: 00017068  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c38, pcode error at 0001708c: Unable to disassemble EXTERNAL block location: 0001708c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c44, pcode error at 00017090: Unable to disassemble EXTERNAL block location: 00017090  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b78, pcode error at 0001703c: Unable to disassemble EXTERNAL block location: 0001703c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b84, pcode error at 00017040: Unable to disassemble EXTERNAL block location: 00017040  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011bb4, pcode error at 00017050: Unable to disassemble EXTERNAL block location: 00017050  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c2c, pcode error at 00017080: Unable to disassemble EXTERNAL block location: 00017080  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c74, pcode error at 0001709c: Unable to disassemble EXTERNAL block location: 0001709c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011ba8, pcode error at 0001704c: Unable to disassemble EXTERNAL block location: 0001704c  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011bf0, pcode error at 00017064: Unable to disassemble EXTERNAL block location: 00017064  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b6c, pcode error at 00017038: Unable to disassemble EXTERNAL block location: 00017038  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c68, pcode error at 00017098: Unable to disassemble EXTERNAL block location: 00017098  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011be4, pcode error at 00017060: Unable to disassemble EXTERNAL block location: 00017060  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011b60, pcode error at 00017034: Unable to disassemble EXTERNAL block location: 00017034  
+2024-04-07 01:53:31 WARN  (DecompileCallback) Decompiling 00011c20, pcode error at 0001707c: Unable to disassemble EXTERNAL block location: 0001707c  
+2024-04-07 01:53:32 INFO  (PackedDatabaseCache) Packed database cache: /tmp/va-Ghidra/packed-db-cache  
+2024-04-07 01:53:32 DEBUG (PackedDatabaseCache) Using cached packed database: /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2024-04-07 01:53:33 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ARM Constant Reference Analyzer            0.511 secs
+    ARM Pre-Pattern Analyzer                   0.016 secs
+    ARM Symbol                                 0.001 secs
+    ASCII Strings                              0.320 secs
+    Apply Data Archives                        0.240 secs
+    Call Convention ID                         0.029 secs
+    Call-Fixup Installer                       0.021 secs
+    Create Address Tables                      0.020 secs
+    Create Address Tables - One Time           0.012 secs
+    Create Function                            0.186 secs
+    Data Reference                             0.044 secs
+    Decompiler Switch Analysis                 0.374 secs
+    Demangler GNU                              0.056 secs
+    Disassemble                                0.050 secs
+    Disassemble Entry Points                   0.231 secs
+    Embedded Media                             0.009 secs
+    External Entry References                  0.000 secs
+    Function Start Search                      0.054 secs
+    Function Start Search After Code           0.012 secs
+    Function Start Search After Data           0.005 secs
+    Function Start Search delayed - One Time   0.002 secs
+    Non-Returning Functions - Discovered       0.020 secs
+    Non-Returning Functions - Known            0.011 secs
+    Reference                                  0.042 secs
+    Shared Return Calls                        0.020 secs
+    Stack                                      0.252 secs
+    Subroutine References                      0.070 secs
+-----------------------------------------------------
+     Total Time   2 secs
+-----------------------------------------------------
+  
+2024-04-07 01:53:33 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:34 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:34 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/Script.java  
+2024-04-07 01:53:34 INFO  (GhidraScript) Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 01:53:34 INFO  Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 01:53:34 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:34 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/va/Projects/temp_20240404_070328/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:53:34 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:54:56 INFO  (LoggingInitialization) Using log config file: jar:file:/home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2024-04-07 01:54:56 INFO  (LoggingInitialization) Using log file: /home/va/git/HybridSE/src/lib/GhidraScripts/ghidra.log  
+2024-04-07 01:54:56 INFO  (Preferences) Loading user preferences: /home/va/.ghidra/.ghidra_10.1.4_PUBLIC/preferences  
+2024-04-07 01:54:56 INFO  (Preferences) Loading previous preferences: /home/va/.ghidra/.ghidra_10.3.1_PUBLIC/preferences  
+2024-04-07 01:54:57 INFO  (ClassSearcher) Class search complete (821 ms)  
+2024-04-07 01:54:57 INFO  (SSLContextInitializer) Initializing SSL Context  
+2024-04-07 01:54:57 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2024-04-07 01:54:57 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2024-04-07 01:54:57 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/va/git/HybridSE/src/lib/GhidraScripts/src
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts  
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer) Creating temporary project: /home/va/git/HybridSE/src/lib/GhidraScripts/bd90d025-16f9-40f9-b0c0-5affc5f3e7d4  
+2024-04-07 01:54:57 INFO  (DefaultProject) Creating project: /home/va/git/HybridSE/src/lib/GhidraScripts/bd90d025-16f9-40f9-b0c0-5affc5f3e7d4  
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer)      project: /home/va/git/HybridSE/src/lib/GhidraScripts/bd90d025-16f9-40f9-b0c0-5affc5f3e7d4  
+2024-04-07 01:54:57 INFO  (HeadlessAnalyzer) IMPORTING: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:54:59 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2024-04-07 01:54:59 DEBUG (ElfHeader) Elf relocation table section .rel.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2024-04-07 01:54:59 DEBUG (ElfHeader) Elf relocation table section .rel.plt linked to symbol table section .dynsym affecting .plt  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .data at 00016000 from file offset 20480  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .got at 00015f24 from file offset 20260  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .dynamic at 00015e0c from file offset 19980  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .init_array at 00015e08 from file offset 19976  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .data.rel.ro at 00015d70 from file offset 19824  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .fini_array at 00015d68 from file offset 19816  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .rodata at 00013f34 from file offset 16180  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .ARM.exidx at 00013ca4 from file offset 15524  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .ARM.extab at 00013bb4 from file offset 15284  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .text at 00011cb0 from file offset 7344  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .plt at 00011ac8 from file offset 6856  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .rel.plt at 00011990 from file offset 6544  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .rel.dyn at 00011840 from file offset 6208  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .hash at 00011524 from file offset 5412  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00010788 from file offset 1928  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .dynsym at 00010148 from file offset 328  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .interp at 00010134 from file offset 308  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00010000 from file offset 0  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Discarding 1-byte alignment/filler segment_2.3 at 00010147  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Discarding 2-byte alignment/filler segment_2.6 at 00011522  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 20613  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .ARM.attributes at OTHER:00000000 from file offset 20568  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .note.gnu.gold-version at OTHER:00000000 from file offset 20540  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 20484  
+2024-04-07 01:54:59 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 20816  
+2024-04-07 01:54:59 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "ARM:LE:32:v8" and cspec "default" for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:55:00 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/PreScript.java  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c50, pcode error at 00017084: Unable to disassemble EXTERNAL block location: 00017084  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c14, pcode error at 00017070: Unable to disassemble EXTERNAL block location: 00017070  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b54, pcode error at 00017030: Unable to disassemble EXTERNAL block location: 00017030  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011bd8, pcode error at 0001705c: Unable to disassemble EXTERNAL block location: 0001705c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c5c, pcode error at 00017094: Unable to disassemble EXTERNAL block location: 00017094  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b9c, pcode error at 00017048: Unable to disassemble EXTERNAL block location: 00017048  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c44, pcode error at 00017090: Unable to disassemble EXTERNAL block location: 00017090  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b78, pcode error at 0001703c: Unable to disassemble EXTERNAL block location: 0001703c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011bfc, pcode error at 00017068: Unable to disassemble EXTERNAL block location: 00017068  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c08, pcode error at 0001706c: Unable to disassemble EXTERNAL block location: 0001706c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c38, pcode error at 0001708c: Unable to disassemble EXTERNAL block location: 0001708c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b84, pcode error at 00017040: Unable to disassemble EXTERNAL block location: 00017040  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011bb4, pcode error at 00017050: Unable to disassemble EXTERNAL block location: 00017050  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c2c, pcode error at 00017080: Unable to disassemble EXTERNAL block location: 00017080  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011bf0, pcode error at 00017064: Unable to disassemble EXTERNAL block location: 00017064  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b6c, pcode error at 00017038: Unable to disassemble EXTERNAL block location: 00017038  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c74, pcode error at 0001709c: Unable to disassemble EXTERNAL block location: 0001709c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011ba8, pcode error at 0001704c: Unable to disassemble EXTERNAL block location: 0001704c  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c68, pcode error at 00017098: Unable to disassemble EXTERNAL block location: 00017098  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011b60, pcode error at 00017034: Unable to disassemble EXTERNAL block location: 00017034  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011be4, pcode error at 00017060: Unable to disassemble EXTERNAL block location: 00017060  
+2024-04-07 01:55:00 WARN  (DecompileCallback) Decompiling 00011c20, pcode error at 0001707c: Unable to disassemble EXTERNAL block location: 0001707c  
+2024-04-07 01:55:01 INFO  (PackedDatabaseCache) Packed database cache: /tmp/va-Ghidra/packed-db-cache  
+2024-04-07 01:55:01 DEBUG (PackedDatabaseCache) Using cached packed database: /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2024-04-07 01:55:02 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ARM Constant Reference Analyzer            0.456 secs
+    ARM Pre-Pattern Analyzer                   0.006 secs
+    ARM Symbol                                 0.001 secs
+    ASCII Strings                              0.337 secs
+    Apply Data Archives                        0.175 secs
+    Call Convention ID                         0.026 secs
+    Call-Fixup Installer                       0.015 secs
+    Create Address Tables                      0.011 secs
+    Create Address Tables - One Time           0.012 secs
+    Create Function                            0.160 secs
+    Data Reference                             0.021 secs
+    Decompiler Switch Analysis                 0.381 secs
+    Demangler GNU                              0.058 secs
+    Disassemble                                0.045 secs
+    Disassemble Entry Points                   0.215 secs
+    Embedded Media                             0.010 secs
+    External Entry References                  0.001 secs
+    Function Start Search                      0.058 secs
+    Function Start Search After Code           0.008 secs
+    Function Start Search After Data           0.004 secs
+    Function Start Search delayed - One Time   0.001 secs
+    Non-Returning Functions - Discovered       0.013 secs
+    Non-Returning Functions - Known            0.008 secs
+    Reference                                  0.045 secs
+    Shared Return Calls                        0.020 secs
+    Stack                                      0.287 secs
+    Subroutine References                      0.055 secs
+-----------------------------------------------------
+     Total Time   2 secs
+-----------------------------------------------------
+  
+2024-04-07 01:55:02 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:55:03 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:55:03 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/Script.java  
+2024-04-07 01:55:03 INFO  (GhidraScript) Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 01:55:03 INFO  Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 01:55:03 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:55:03 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 01:55:03 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:34 INFO  (LoggingInitialization) Using log config file: jar:file:/home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2024-04-07 02:13:34 INFO  (LoggingInitialization) Using log file: /home/va/git/HybridSE/src/lib/GhidraScripts/ghidra.log  
+2024-04-07 02:13:34 INFO  (Preferences) Loading user preferences: /home/va/.ghidra/.ghidra_10.1.4_PUBLIC/preferences  
+2024-04-07 02:13:34 INFO  (Preferences) Loading previous preferences: /home/va/.ghidra/.ghidra_10.3.1_PUBLIC/preferences  
+2024-04-07 02:13:35 INFO  (ClassSearcher) Class search complete (763 ms)  
+2024-04-07 02:13:35 INFO  (SSLContextInitializer) Initializing SSL Context  
+2024-04-07 02:13:35 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2024-04-07 02:13:35 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2024-04-07 02:13:35 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2024-04-07 02:13:35 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/va/git/HybridSE/src/lib/GhidraScripts/src
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts  
+2024-04-07 02:13:35 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2024-04-07 02:13:35 INFO  (HeadlessAnalyzer) Creating temporary project: /home/va/git/HybridSE/src/lib/GhidraScripts/4d3fe156-fcf1-412a-bee2-4f3b3ae5fa30  
+2024-04-07 02:13:36 INFO  (DefaultProject) Creating project: /home/va/git/HybridSE/src/lib/GhidraScripts/4d3fe156-fcf1-412a-bee2-4f3b3ae5fa30  
+2024-04-07 02:13:36 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2024-04-07 02:13:36 INFO  (HeadlessAnalyzer)      project: /home/va/git/HybridSE/src/lib/GhidraScripts/4d3fe156-fcf1-412a-bee2-4f3b3ae5fa30  
+2024-04-07 02:13:36 INFO  (HeadlessAnalyzer) IMPORTING: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:37 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2024-04-07 02:13:37 DEBUG (ElfHeader) Elf relocation table section .rel.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2024-04-07 02:13:37 DEBUG (ElfHeader) Elf relocation table section .rel.plt linked to symbol table section .dynsym affecting .plt  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .data at 00016000 from file offset 20480  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .got at 00015f24 from file offset 20260  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .dynamic at 00015e0c from file offset 19980  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .init_array at 00015e08 from file offset 19976  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .data.rel.ro at 00015d70 from file offset 19824  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .fini_array at 00015d68 from file offset 19816  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .rodata at 00013f34 from file offset 16180  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .ARM.exidx at 00013ca4 from file offset 15524  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .ARM.extab at 00013bb4 from file offset 15284  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .text at 00011cb0 from file offset 7344  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .plt at 00011ac8 from file offset 6856  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .rel.plt at 00011990 from file offset 6544  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .rel.dyn at 00011840 from file offset 6208  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .hash at 00011524 from file offset 5412  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00010788 from file offset 1928  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .dynsym at 00010148 from file offset 328  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .interp at 00010134 from file offset 308  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00010000 from file offset 0  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Discarding 1-byte alignment/filler segment_2.3 at 00010147  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Discarding 2-byte alignment/filler segment_2.6 at 00011522  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 20613  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .ARM.attributes at OTHER:00000000 from file offset 20568  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .note.gnu.gold-version at OTHER:00000000 from file offset 20540  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 20484  
+2024-04-07 02:13:37 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 20816  
+2024-04-07 02:13:38 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "ARM:LE:32:v8" and cspec "default" for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:38 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/PreScript.java  
+2024-04-07 02:13:38 WARN  (DecompileCallback) Decompiling 00011b9c, pcode error at 00017048: Unable to disassemble EXTERNAL block location: 00017048  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011b84, pcode error at 00017040: Unable to disassemble EXTERNAL block location: 00017040  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c08, pcode error at 0001706c: Unable to disassemble EXTERNAL block location: 0001706c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c50, pcode error at 00017084: Unable to disassemble EXTERNAL block location: 00017084  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c14, pcode error at 00017070: Unable to disassemble EXTERNAL block location: 00017070  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011b54, pcode error at 00017030: Unable to disassemble EXTERNAL block location: 00017030  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011bd8, pcode error at 0001705c: Unable to disassemble EXTERNAL block location: 0001705c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c5c, pcode error at 00017094: Unable to disassemble EXTERNAL block location: 00017094  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011bfc, pcode error at 00017068: Unable to disassemble EXTERNAL block location: 00017068  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011b78, pcode error at 0001703c: Unable to disassemble EXTERNAL block location: 0001703c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c44, pcode error at 00017090: Unable to disassemble EXTERNAL block location: 00017090  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c74, pcode error at 0001709c: Unable to disassemble EXTERNAL block location: 0001709c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c38, pcode error at 0001708c: Unable to disassemble EXTERNAL block location: 0001708c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011bf0, pcode error at 00017064: Unable to disassemble EXTERNAL block location: 00017064  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011bb4, pcode error at 00017050: Unable to disassemble EXTERNAL block location: 00017050  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011b6c, pcode error at 00017038: Unable to disassemble EXTERNAL block location: 00017038  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011ba8, pcode error at 0001704c: Unable to disassemble EXTERNAL block location: 0001704c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c2c, pcode error at 00017080: Unable to disassemble EXTERNAL block location: 00017080  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011be4, pcode error at 00017060: Unable to disassemble EXTERNAL block location: 00017060  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c20, pcode error at 0001707c: Unable to disassemble EXTERNAL block location: 0001707c  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011b60, pcode error at 00017034: Unable to disassemble EXTERNAL block location: 00017034  
+2024-04-07 02:13:39 WARN  (DecompileCallback) Decompiling 00011c68, pcode error at 00017098: Unable to disassemble EXTERNAL block location: 00017098  
+2024-04-07 02:13:39 INFO  (PackedDatabaseCache) Packed database cache: /tmp/va-Ghidra/packed-db-cache  
+2024-04-07 02:13:39 DEBUG (PackedDatabaseCache) Using cached packed database: /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2024-04-07 02:13:40 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ARM Constant Reference Analyzer            0.443 secs
+    ARM Pre-Pattern Analyzer                   0.005 secs
+    ARM Symbol                                 0.001 secs
+    ASCII Strings                              0.294 secs
+    Apply Data Archives                        0.185 secs
+    Call Convention ID                         0.039 secs
+    Call-Fixup Installer                       0.016 secs
+    Create Address Tables                      0.028 secs
+    Create Address Tables - One Time           0.011 secs
+    Create Function                            0.233 secs
+    Data Reference                             0.033 secs
+    Decompiler Switch Analysis                 0.417 secs
+    Demangler GNU                              0.076 secs
+    Disassemble                                0.040 secs
+    Disassemble Entry Points                   0.221 secs
+    Embedded Media                             0.010 secs
+    External Entry References                  0.001 secs
+    Function Start Search                      0.060 secs
+    Function Start Search After Code           0.009 secs
+    Function Start Search After Data           0.008 secs
+    Function Start Search delayed - One Time   0.000 secs
+    Non-Returning Functions - Discovered       0.018 secs
+    Non-Returning Functions - Known            0.009 secs
+    Reference                                  0.047 secs
+    Shared Return Calls                        0.022 secs
+    Stack                                      0.255 secs
+    Subroutine References                      0.054 secs
+-----------------------------------------------------
+     Total Time   2 secs
+-----------------------------------------------------
+  
+2024-04-07 02:13:40 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:41 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:41 INFO  (HeadlessAnalyzer) SCRIPT: /home/va/git/HybridSE/src/lib/GhidraScripts/src/Script.java  
+2024-04-07 02:13:41 INFO  (GhidraScript) Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 02:13:41 INFO  Script.java> TESTING CONCRETE ADDRESS  
+2024-04-07 02:13:41 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:41 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/va/Projects/temp_20240407_012402/java_projects/DF895D828958F0AB75B92CEB4C92A85A713046E0F9521ADDBC8756E5A1B4102C/lib/armeabi/libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:13:41 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /libBaiduMapSDK_cloud_v3_6_1.so  
+2024-04-07 02:30:42 INFO  (LoggingInitialization) Using log config file: jar:file:/home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2024-04-07 02:30:42 INFO  (LoggingInitialization) Using log file: /home/va/git/HybridSE/src/lib/GhidraScripts/ghidra.log  
+2024-04-07 02:30:42 INFO  (Preferences) Loading user preferences: /home/va/.ghidra/.ghidra_10.1.4_PUBLIC/preferences  
+2024-04-07 02:30:42 INFO  (Preferences) Loading previous preferences: /home/va/.ghidra/.ghidra_10.3.1_PUBLIC/preferences  
+2024-04-07 02:30:43 INFO  (ClassSearcher) Class search complete (849 ms)  
+2024-04-07 02:30:43 INFO  (SSLContextInitializer) Initializing SSL Context  
+2024-04-07 02:30:43 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2024-04-07 02:30:43 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2024-04-07 02:30:43 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/va/git/HybridSE/src/lib/GhidraScripts/src
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/va/git/HybridSE/src/lib/ghidra/ghidra_10.1.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts  
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer) Creating temporary project: /home/va/git/HybridSE/src/lib/GhidraScripts/0f058d75-d6ba-4159-8fdb-57af274d41c8  
+2024-04-07 02:30:44 INFO  (DefaultProject) Creating project: /home/va/git/HybridSE/src/lib/GhidraScripts/0f058d75-d6ba-4159-8fdb-57af274d41c8  
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer)      project: /home/va/git/HybridSE/src/lib/GhidraScripts/0f058d75-d6ba-4159-8fdb-57af274d41c8  
+2024-04-07 02:30:44 INFO  (HeadlessAnalyzer) IMPORTING: /home/va/Projects/temp_20240407_012402/java_projects/41E800C073CC57BA046F8A22476AB2157C72BF9E39352B3624C15B81FBAF754B/lib/armeabi/libjiagu_art.so  
+2024-04-07 02:30:44 INFO  (AutoImporter) No load spec found for import file: /home/va/Projects/temp_20240407_012402/java_projects/41E800C073CC57BA046F8A22476AB2157C72BF9E39352B3624C15B81FBAF754B/lib/armeabi/libjiagu_art.so  
+2024-04-07 02:30:44 ERROR (HeadlessAnalyzer) The AutoImporter could not successfully load /home/va/Projects/temp_20240407_012402/java_projects/41E800C073CC57BA046F8A22476AB2157C72BF9E39352B3624C15B81FBAF754B/lib/armeabi/libjiagu_art.so with the provided import parameters. Please ensure that any specified processor/cspec arguments are compatible with the loader that is used during import and try again.  
+2024-04-07 02:30:44 ERROR (HeadlessAnalyzer) REPORT: Import failed for file: /home/va/Projects/temp_20240407_012402/java_projects/41E800C073CC57BA046F8A22476AB2157C72BF9E39352B3624C15B81FBAF754B/lib/armeabi/libjiagu_art.so  

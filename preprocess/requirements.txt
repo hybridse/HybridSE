@@ -1,0 +1,7 @@
+Deprecated==1.2.14
+Jinja2==3.1.2
+networkx==2.4
+numpy==1.21.5
+pandas==2.0.3
+tqdm==4.65.0
+pygraphviz==1.11

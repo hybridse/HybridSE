@@ -1,0 +1,16 @@
+package {{package_name}};
+
+import android.os.Bundle;
+import android.content.Context;
+import android.view.View; 
+
+public class {{class_name}}Wrapper {
+	public static void main(String[] args) {
+			{{class_name}}Wrapper.run();
+		}
+
+	public static void run() {
+		{{class_name}} thd = new {{class_name}}();
+		thd.run();
+	}	
+}
