@@ -12,6 +12,27 @@ HybridSE consider performing symbolic execution across heterogeneous platforms. 
 - License.txt
 
 ## How to run
+python preprocess/Main.py -h 
+usage: Main.py [-h] [-n NPROC] [-s STAMP] [-e EXCLUDE] [-j] path [{all,dse,cha,xml} ...]
+
+Optional description
+
+positional arguments:
+  path                  Path to apk file or directory
+  {all,dse,cha,xml}     Choose analysis action
+
+options:
+  -h, --help            show this help message and exit
+  -n NPROC, --nproc NPROC
+                        Number of paralel processes
+  -s STAMP, --stamp STAMP
+                        Name the output folder
+  -e EXCLUDE, --exclude EXCLUDE
+                        Previous history CSV file
+  -j, --keep_jar        Keep .jar file after analysis
+
+
+## How to build
 - Use the following commands to build the Docker container and run samples.
 ```
 docker build -t hybridse:v1 .
