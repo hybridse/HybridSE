@@ -2,7 +2,6 @@
 
 export PROJ_DIR=$1
 echo "$2"
-echo "RUN SE TOOLS"
 cd ${PROJ_DIR}
 
 #echo "BUILDING JPF-SYMBC"

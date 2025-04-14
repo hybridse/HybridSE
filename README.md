@@ -155,6 +155,14 @@ listener = #path to NativeListener (provided in /spf-interfaces/NativeListener.j
 ```
 Selecting a run configuration from the "Run" menu in Eclipse. In particular you should select: "run-JPF-symbc" to run Symbolic PathFinder on your example. 
 
+## Workflow of HybridSE
+- Run apk sample by:
+python preprocessing/RunSample.py xxx.apk 
+
+- Preprocessing by apktool and dex2jar: preprocessing/APKReader.py
+- Class hierachry analysis: preprocessing/CHA.py
+- Generate configuration files for JPF-symbc: preprocessing/TemplateGen.py
+
 
 ## License
 This project is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).

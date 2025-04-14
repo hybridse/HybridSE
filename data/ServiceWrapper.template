@@ -13,9 +13,11 @@ public class {{class_name}}Wrapper {
 		{% if entry_point == 'onCreate' %}
 		(new {{class_name}}()).onCreate();
 		
-		{% else %}
+		{%  elif entry_point == 'intent' %}
 		Intent intent = new Intent();
 		(new {{class_name}}()).{{entry_point}}(intent, 0);
+		{% else %}
+		(new {{class_name}}()).{{entry_point}}({{params}})
 		{% endif %}
 
 	}

@@ -11,6 +11,7 @@ import pickle
 import time
 import re
 import logging
+from CHA import generate_dot
 
 logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler(filename="logfile_" + time.strftime("%Y%m%d_%H%M%S") + ".log",mode = "w")
@@ -19,33 +20,37 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 class APKReader:
-    ROOT_DIR = "/home/va/git"
+    ROOT_DIR = str(Path().resolve().parent)
     
     PROJ_DIR = ROOT_DIR + "/HybridSE"
     DEX2JAR_DIR = ROOT_DIR + "/dex2jar/dex-tools/build/distributions/dex2jar-0.0.9.15"
     DEX2JAR_DIR_2 = ROOT_DIR + "/dex2jar/dex-tools/build/distributions/dex-tools-2.1-SNAPSHOT"
     
     stamp = time.strftime("%Y%m%d_%H%M%S")
-    TEMP= ROOT_DIR + "/out/result_" + stamp
-    APKTOOL_FDR= TEMP + "/apktool_folder"
-    DEX2JAR_INP= TEMP + "/dex2jar_input"
-    DEX2JAR_OUT= TEMP + "/dex2jar_output"
-    JAVA_PROJECT= TEMP + "/projects" 
     BASE_PROJECT= PROJ_DIR + "/data/base_project"
-    CSV_FILE= "{}/apk_{}.csv".format(TEMP, stamp)
+    RESULT_FOLDER= ROOT_DIR + "/hybridSE_output/result_" + stamp
+    
+    APKTOOL_FDR= RESULT_FOLDER + "/apktool_folder"
+    DEX2JAR_INP= RESULT_FOLDER + "/dex2jar_input"
+    DEX2JAR_OUT= RESULT_FOLDER + "/dex2jar_output"
+    JAVA_PROJECT= RESULT_FOLDER 
+    
+    CSV_FILE= "{}/apk_{}.csv".format(RESULT_FOLDER, stamp)
     APK_NAME = ""
     no_debug = False
     
     def __init__(self) -> None:
-        Path(self.TEMP).mkdir(parents=True, exist_ok=True)
+        Path(self.RESULT_FOLDER).mkdir(parents=True, exist_ok=True)
         Path(self.APKTOOL_FDR).mkdir(parents=True, exist_ok=True)
         Path(self.DEX2JAR_INP).mkdir(parents=True, exist_ok=True)
         Path(self.DEX2JAR_OUT).mkdir(parents=True, exist_ok=True)
 
-    ## 
-    # Run APK function
-    ##
-    def run_apktool(self, apk_fpath):
+    def run_apktool(self, apk_fpath, clean=True):
+        """
+        Run preprocessing tools: apktool + dex2jar + javap 
+        :param apk_fpath - path to apk file
+        :param clean - remove jar file after preprocessing
+        """
         file_path = Path(apk_fpath)
         apk_name = file_path.stem
         self.APK_NAME = apk_name
@@ -71,10 +76,10 @@ class APKReader:
             dex_count = len(dex_files)
             
             # DEX2JAR
-            d2j_cmd = "{}/d2j-dex2jar.sh -f -d {}/{} -o {}/{}.jar" \
-                        .format(self.DEX2JAR_DIR, self.DEX2JAR_INP, apk_name, self.DEX2JAR_OUT, apk_name)
-            sp.run(d2j_cmd,  shell=True, capture_output=self.no_debug, text=self.no_debug)
-            logger.debug(msg=d2j_cmd)
+            # d2j_cmd = "{}/d2j-dex2jar.sh -f -d {}/{} -o {}/{}.jar" \
+            #             .format(self.DEX2JAR_DIR, self.DEX2JAR_INP, apk_name, self.DEX2JAR_OUT, apk_name)
+            #sp.run(d2j_cmd,  shell=True, capture_output=self.no_debug, text=self.no_debug)
+            #logger.debug(msg=d2j_cmd)
 
             # retry w/ DEX2JAR 2.1
             if not Path("{}/{}.jar".format(self.DEX2JAR_OUT, apk_name)).exists():
@@ -82,9 +87,8 @@ class APKReader:
                         .format(self.DEX2JAR_DIR_2, self.DEX2JAR_INP, apk_name, self.DEX2JAR_OUT, apk_name)
                 sp.run(d2j_cmd,  shell=True, capture_output=self.no_debug, text=self.no_debug)
                 logger.debug(msg=d2j_cmd)
-                print('RETRY WITH DEX2JAR-2.1.')
+                print('TRY WITH DEX2JAR-2.1.')
 
-            # Count native functions
             findnative_cmd = "jar tf {}/{}.jar | grep '.class$' | tr / . | sed 's/\.class$//'| xargs javap -protected -cp {}/{}.jar | grep ' native '" \
                         .format(self.DEX2JAR_OUT, apk_name, self.DEX2JAR_OUT, apk_name)
             findnative_p = sp.run(findnative_cmd, shell=True, capture_output=True, text=True)
@@ -129,9 +133,6 @@ class APKReader:
         
                 with zipfile.ZipFile(self.DEX2JAR_OUT + '/' + apk_name + '.jar', 'r') as zip_ref:
                     zip_ref.extractall(target_project + '/src')
-            
-                # with zipfile.ZipFile(self.BASE_PROJECT + '/base.jar', 'r') as zip_ref:
-                #     zip_ref.extractall(target_project + '/src')
                
                 shutil.copy(self.APKTOOL_FDR + '/' + apk_name + '.out/AndroidManifest.xml', target_project)
                 shutil.copytree(self.APKTOOL_FDR +'/'+ apk_name + '.out/lib/', target_project + "/lib", dirs_exist_ok=True)
@@ -141,7 +142,6 @@ class APKReader:
                 # Write all method name
                 classes={}
                 findclass_cmd = "jar tf {}/{}.jar | grep '.class$' | tr / . | sed 's/\.class$//'".format(self.DEX2JAR_OUT, apk_name)
-                # findclass_p = sp.run(findclass_cmd, shell=True, capture_output=True, text=True)
                 
                 find_cmd = "jar tf {}/{}.jar | grep '.class$' | tr / . | sed 's/\.class$//'| xargs javap -protected -cp {}/{}.jar" \
                         .format(self.DEX2JAR_OUT, apk_name, self.DEX2JAR_OUT, apk_name)
@@ -160,9 +160,6 @@ class APKReader:
                 with zipfile.ZipFile(self.DEX2JAR_OUT + '/' + apk_name + '.jar', 'r') as zip_ref:
                     zip_ref.extractall(target_project + '/src')
             
-                # with zipfile.ZipFile(self.BASE_PROJECT + '/base.jar', 'r') as zip_ref:
-                #     zip_ref.extractall(target_project + '/src')
-                
                 shutil.copy(self.APKTOOL_FDR + '/' + apk_name + '.out/AndroidManifest.xml', target_project)
                 if so_in_assets == 'yes':
                     shutil.copytree(self.APKTOOL_FDR +'/'+ apk_name + '.out/assets/', target_project + "/assets", dirs_exist_ok=True)
@@ -170,8 +167,6 @@ class APKReader:
                 # Write all method name
                 classes={}
                 findclass_cmd = "jar tf {}/{}.jar | grep '.class$' | tr / . | sed 's/\.class$//'".format(self.DEX2JAR_OUT, apk_name)
-                # findclass_p = sp.run(findclass_cmd, shell=True, capture_output=True, text=True)
-                
                 find_cmd = "jar tf {}/{}.jar | grep '.class$' | tr / . | sed 's/\.class$//'| xargs javap -protected -cp {}/{}.jar" \
                         .format(self.DEX2JAR_OUT, apk_name, self.DEX2JAR_OUT, apk_name)
                 find_p = sp.run(find_cmd, shell=True, capture_output=True, text=True)
@@ -183,11 +178,26 @@ class APKReader:
                     pickle.dump(classes, handle)
                 print('DONE UNPACKING APK.')
 
-            # TEMPORARY 2025/01/04 Commented out for testing
-            #shutil.rmtree(self.APKTOOL_FDR + '/' + apk_name + '.out',  ignore_errors=True)
-            #Path(self.DEX2JAR_INP + '/' + apk_name).unlink(missing_ok=True)
-            #Path(self.DEX2JAR_OUT + '/' + apk_name + '.jar').unlink(missing_ok=True)
+            # CHA
+            jarfile = self.DEX2JAR_OUT + "/" + apk_name + ".jar"
+            dotfile = self.JAVA_PROJECT + "/" + apk_name + '/callgraph.dot'
+            txt_file = self.JAVA_PROJECT + "/" + apk_name + "/callgraph.txt"
+            cha_cmd = "java -jar lib/javacg-0.1-SNAPSHOT-static.jar {} > {}" \
+                                    .format(jarfile, txt_file)
+            sp.run(cha_cmd, shell=True, capture_output=True, text=True)
+            generate_dot(txt_file, dotfile)
+            print('DONE Class Hierarchy Analysis.')
+
+            # Count native functions
+            # RESULT_FOLDER 2025/01/04 Commented out for testing
+            shutil.rmtree(self.APKTOOL_FDR + '/' + apk_name + '.out',  ignore_errors=True)
+            Path(self.DEX2JAR_INP + '/' + apk_name).unlink(missing_ok=True)
+            shutil.rmtree(self.JAVA_PROJECT + '/' + apk_name + '/src', ignore_errors=True)
+            shutil.rmtree(self.JAVA_PROJECT + '/' + apk_name + '/lib', ignore_errors=True)
         
+            if clean:    
+                Path(self.DEX2JAR_OUT + '/' + apk_name + '.jar').unlink(missing_ok=True)
+                
         except Exception :
             print(traceback.format_exc())
 
@@ -214,15 +224,20 @@ class APKReader:
                             # filter public methods
                             if len(line.split()) > 2:
                                 classes[class_name].append(line.strip())
-                if 'java.lang.Thread' in cls.strip():
+                elif 'java.lang.Thread' in cls.strip():
                     classes['Thread'].append(class_name)
 
-                if 'android.os.AsyncTask' in cls.strip():
+                elif 'android.os.AsyncTask' in cls.strip():
                     classes['asyncTask'].append(class_name)
                 
-                if 'java.lang.Runnable' in cls.strip():
+                elif 'java.lang.Runnable' in cls.strip():
                     classes['Runnable'].append(class_name)
-        
+                else:
+                    for line in mth_content.splitlines():
+                        if 'public' in line or 'protected' in line:
+                            # filter public methods
+                            if len(line.split()) > 2:
+                                classes[class_name].append(line.strip())
         for cls in classes:
             #if not len(classes[cls]) == 0 or cls == 'asyncTask':
                 class_out[cls] = classes[cls]
@@ -281,9 +296,9 @@ class APKReader:
     ##
     # Iterate functions
     ##
-    def analyse_file(self, file_path):
+    def analyse_file(self, file_path, is_clean=True):
         path = Path(file_path)
-        self.run_apktool(path)
+        self.run_apktool(path, is_clean)
         return self.JAVA_PROJECT + '/' + self.APK_NAME
     
     def analyse_dir_multiproc(self, dir_path):
@@ -307,4 +322,3 @@ class APKReader:
 if __name__ == "__main__": 
     args = sys.argv[1:]
     APKReader().analyse_dir(args[0])  #args[0] is path to an APK file
-    #APKReader().analyse_file(args[0])

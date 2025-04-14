@@ -16,9 +16,15 @@
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER&quot; javaProject=&quot;jpf-symbc&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#10;"/>
+        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;/home/va/git/HybridSE/data/base_project/base.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
+        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry id=&quot;org.eclipse.jdt.launching.classpathentry.defaultClasspath&quot;&gt;&#10;    &lt;memento exportedEntriesOnly=&quot;false&quot; project=&quot;jpf-symbc&quot;/&gt;&#10;&lt;/runtimeClasspathEntry&gt;&#10;"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gov.nasa.jpf.tool.RunJPF"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="jpf-symbc"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-out /home/va/git/out/result_20240621_173710/projects/native_noleak/MainActivity_onRequestPermissionsResult.jpf"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-out /home/va/git/out/result_20250404_170837/projects/PhoneParentalbis/FirebaseMessagingService_onCreate.jpf"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="jpf-symbc"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx2024m"/>
     <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/home/va/git/HybridSE/src"/>

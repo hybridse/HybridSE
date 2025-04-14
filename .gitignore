@@ -6,3 +6,13 @@
 /.idea/*
 corana.iml
 /.vscode
+/*.log
+/*-error.zip
+/.classpath
+/bin
+*/target/
+*/.classpath
+.gitignore
+.gitattributes
+.classpath
+*/__pycache__

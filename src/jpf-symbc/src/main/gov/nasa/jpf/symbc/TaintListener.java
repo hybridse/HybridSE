@@ -616,7 +616,7 @@ public class TaintListener extends PropertyListenerAdapter {
 				tm.register.taint('0');
 			}
 	     } catch (Exception e) { 
-	        e.printStackTrace();
+	        //e.printStackTrace();
 	     }
 		 return tm;
 	}
@@ -852,13 +852,13 @@ public class TaintListener extends PropertyListenerAdapter {
 		 	                    top.setPC(nextPC);
 		 	                    
 		 	                    currentThread.setNextPC(nextPC); 
-		                		 
-				    
+		                		
 	                	 }
 	               	} else if (insn instanceof INVOKESPECIAL) {
 	               		if (insn.toString().contains("javax.crypto")
 	               				|| insn.toString().contains("android.os.AsyncTask.")
 	               				|| insn.toString().contains("org.apache.http.impl.client.AbstractHttpClient.")
+	               				|| insn.toString().contains("java.util.concurrent.ThreadPoolExecutor.")
 	               				) {
 	               			StackFrame top = ti.getTopFrame();
 		                	Instruction nextPC = top.getPC().getNext();

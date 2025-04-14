@@ -178,9 +178,3 @@ if __name__ == "__main__":
                         if find_leak(output, apk, leak_report_file):
                             leak = leak + 1
             print("LEAKS: " + str(leak))
-
-            #     for jpf in file.rglob("*.jpf"):
-            #         #name = get_packagename(jpf)
-            #         # if 'StubApp' in name:
-            #         #     print(name)
-            #         pass
