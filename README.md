@@ -11,7 +11,80 @@ HybridSE consider performing symbolic execution across heterogeneous platforms. 
 	* Dockerfile
 - License.txt
 
-## How to run
+## How to Install and Run Using Docker Images (on Ubuntu 24.04)
+1. Pull the Docker image
+```
+sudo snap install docker
+git clone https://github.com/hybridse/HybridSE.git
+sudo docker pull njajs4642/hybridse:v1
+```
+Or use the following commands to build the Docker container and run samples.
+```
+docker build -t hybridse:v1 .
+docker run -v <path/to/dataset>:/home/app -v <path/to/output/folder>:/home/s2120428/out -d hybridse:v1 </home/app/sample_dir_or_file>
+docker ps -a
+docker start -ai CONTAINER_ID
+```
+2. Locate your APK on your machine: /path-to-apk/apk-file.apk
+3. Run the Docker container:
+```
+sudo docker start -ai $(sudo docker run \
+        -v /path-to-apk:/home/app \       # Mount APK folder inside container
+        -v .:/home/s2120428/out \               # Mount current folder for output
+        -d njajs4642/hybridse:v1 \              # Docker image
+        /home/app/apk-file.apk       # Path to APK inside container
+        )
+```
+### Example running of Docker image
+1. Suppose you are in HybridSE folder, and the tested APK file is located here on:
+./DroidBench-subset/NativeFlowBench/native_leak.apk
+
+Then, inside the Docker container, the same file will be accessible at: /home/app/NativeFlowBench/native_leak.apk
+
+The command to run ./DroidBench-subset/NativeFlowBench/native_leak.apk:
+```
+sudo docker start -ai $(
+    sudo docker run \
+        -v ./DroidBench-subset:/home/app \
+        -v .:/home/s2120428/out \
+        -d hybridse:v1 \
+        /home/app/NativeFlowBench/native_leak.apk
+)
+```
+and the results will be written to your current folder (./) on your host machine.
+
+2. To run all APK files in directory ./DroidBench-subset/NativeFlowBench:
+```
+sudo docker start -ai $(sudo docker run
+-v ./DroidBench-subset:/home/app
+-v .:/home/s2120428/out
+-d hybridse:v1
+/home/app/NativeFlowBench/)
+```
+
+## How to Build and Run locally 
+### Installation
+A script for installation is prepared, please run:
+```
+sudo bash install.sh
+```
+After the installation process, please import HybridSE into Eclipse, or run the project by the Python script.
+```
+python preprocess/RunSample.py <path_to_apk> -n 1 
+```
+- If import project into Eclipse
+In Run Configurations window, choose: run-JPF-symbc
+
+Please refer to ProjectLink.txt for more details.
+
+Note that, the project is already built. To re-build the project, run ant build command in Terminal (since Eclipse 4.23 does not support Ant build with Java 8):
+```
+cd ~/eclipse-workspace/HybridSE/jpf-core
+ant clean build
+cd ../jpf-symbc
+ant clean build
+```
+### How to run 
 python preprocess/Main.py -h 
 usage: Main.py [-h] [-n NPROC] [-s STAMP] [-e EXCLUDE] [-j] path [{all,dse,cha,xml} ...]
 
@@ -31,50 +104,7 @@ options:
                         Previous history CSV file
   -j, --keep_jar        Keep .jar file after analysis
 
-
-## How to build
-- Use the following commands to build the Docker container and run samples.
-```
-docker build -t hybridse:v1 .
-docker run -v <path/to/dataset>:/home/app -v <path/to/output/folder>:/home/s2120428/out -d hybridse:v1 </home/app/sample_dir_or_file>
-docker ps -a
-docker start -ai CONTAINER_ID
-```
-or 
-```
-docker pull njajs4642/hybridse:v1
-```
-- For example, to run native_leak.apk in DroidBench-subset 
-```
-docker start -ai $(sudo docker run -v ./DroidBench-subset:/home/app -v .:/home/s2120428/out -d hybridse:v1 /home/app/NativeFlowBench/native_leak.apk)
-```
-or to run a directory
-```
-docker start -ai $(sudo docker run -v ./DroidBench-subset:/home/app -v .:/home/s2120428/out -d hybridse:v1 /home/app/NativeFlowBench/)
-```
-- If import project into Eclipse
-In Run Configurations window, choose: run-JPF-symbc
-
-Please refer to ProjectLink.txt for more details.
-
-Note that, the project is already built. To re-build the project, run ant build command in Terminal (since Eclipse 4.23 does not support Ant build with Java 8):
-```
-cd ~/eclipse-workspace/HybridSE/jpf-core
-ant clean build
-cd ../jpf-symbc
-ant clean build
-```
-
-## Manual Installation
-A script for installation is prepared, please run:
-```
-sudo bash install.sh
-```
-After the installation process, please import HybridSE into Eclipse, or run the project by the Python script.
-```
-python preprocess/RunSample.py <path_to_apk> -n 1 
-```
-	
+### Component-wise Installation
 The belows explain how to manually install the components we used in HybridSE.  
 ### Prerequisite
 - Java Open JDK 8 (currently SPF only run on Java 8)  and Ant 1.10.12
